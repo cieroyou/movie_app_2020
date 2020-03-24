@@ -8,18 +8,17 @@ class App extends React.Component{
   }
   getMovies = async () =>{
     console.log('request Movies List to yts server');
-    const movies = await axios('https://yts-proxy.now.sh/list_movies.json');
+    // const movies = await axios('https://yts-proxy.now.sh/list_movies.json');
+    // console.log(movies.data.data.movies)
+    // data-data-movies 에 원하는 데이터가 들어있음, 위의 문구를 es6를 사용하여 다음 코드로 변경
+    const {data:{data:{movies}}} = await axios('https://yts-proxy.now.sh/list_movies.json');
+    this.setState({movies:movies, isLoading: false});
 
   }
   componentDidMount(){
     console.log('component did mount')
-    console.log('start setState and isLoading will changed after 6 seconds later')
+    console.log('start setState and isLoading will changed when get movieData from yts')
     this.getMovies();
-    setTimeout(()=>{
-    console.log('isLoading changed [true] -> [false]')
-      this.setState({isLoading : false})
-    },6000)
-
   }
   render(){
     const {isLoading} = this.state;
