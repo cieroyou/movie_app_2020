@@ -2,10 +2,21 @@ import React from 'react';
 
 
 class App extends React.Component{
+  state = {
+    isLoading : true,
+    movies : []
+  }
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({isLoading : false})
+    },6000)
+  }
   render(){
+    const {isLoading} = this.state;
+    console.log(`isLoading : ${isLoading}`)
     return(
     <div>
-      Hello!
+      {isLoading ? "Loading..." : "We are ready!"}
     </div>
     )
   }
