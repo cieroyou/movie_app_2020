@@ -3,6 +3,7 @@ import {HashRouter, Route} from "react-router-dom";
 import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from "./components/Navigation"
+import Detail from "./routes/Detail";
 import './App.css'
 
 
@@ -14,6 +15,7 @@ function App(){
     {/* exact = {true} 를 추가함으로써, /about 라우트 렌더링시 Home 까지 같이 두개가 렌더링 되는 문제를 해결 */}
     <Route path="/" exact={true} component={Home}/>
     <Route path="/about" component={About}/>
+    <Route path="/movie-detail" component={Detail} />
   </HashRouter>
   )
 }
