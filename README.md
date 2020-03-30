@@ -33,6 +33,7 @@ https://yts-proxy.now.sh/list_movies.json
 
 ## sharing props between routes
 ### 영화를 클릭하면 해당 영화 디테일 페이지('/movie-detail')로 이동
+Sending Information via 'Link'
 1. Use Link inside of component which is clicked to go to different URL   
    클래스명이 movie 인 컴포넌트가 클릭되므로, 해당 컴포넌트를 감싸는 Link 태그에 이동할 url로 넘길 데이터를 함께 사용한다 .
       ```jsx
