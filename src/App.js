@@ -15,7 +15,7 @@ function App(){
     {/* exact = {true} 를 추가함으로써, /about 라우트 렌더링시 Home 까지 같이 두개가 렌더링 되는 문제를 해결 */}
     <Route path="/" exact={true} component={Home}/>
     <Route path="/about" component={About}/>
-    <Route path="/movie-detail" component={Detail} />
+    <Route path="/movie/:id" component={Detail} />
   </HashRouter>
   )
 }
