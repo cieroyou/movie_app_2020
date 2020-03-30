@@ -11,9 +11,14 @@ class Detail extends React.Component {
       }
       console.log(location);
     }
-    render(){
-        return <span>Movie Detail</span>
-    }
+    render() {
+        const { location } = this.props;
+        if (location.state) {
+          return <span>{location.state.title}</span>;
+        } else {
+          return null;
+        }
+      }
    
 }
 export default Detail;
