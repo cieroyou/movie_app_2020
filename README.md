@@ -72,3 +72,5 @@ Sending Information via 'Link'
       }  
       ```
    
+## Unfinished..
+I Have to learn Redux and complete this project
